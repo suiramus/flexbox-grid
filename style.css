@@ -1,0 +1,41 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+.center-wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.row-fx {
+	display: flex;
+	justify-content: space-between;
+	margin-left: -2em;
+}
+
+.col-fx {
+	background: rgba(0,0,0,.3);
+	margin: 0 0 2em 2em;
+}
+
+.row-fx-2,
+.row-fx-3 {
+	flex-wrap: wrap;
+}
+
+.row-fx-2 .col-fx {
+	flex-basis: calc(50% - 2em);
+	background: rgba(220,20,20,.3);
+}
+
+.row-fx-3 .col-fx {
+	flex-basis: calc(33.333% - 2em);
+	background: rgba(20,20,220,.3);
+}

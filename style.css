@@ -1,41 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 *, *:before, *:after {
 	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 18px;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
 }
+
+h2 {font-weight: normal; font-size: 25px;}
 
 .center-wrap {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 2rem;
 }
 
 .row-fx {
 	display: flex;
-	justify-content: space-between;
-	margin-left: -2em;
+	/*justify-content: space-between;*/
+	align-content: flex-start;
+	margin-left: -2rem;
 }
 
 .col-fx {
-	background: rgba(0,0,0,.3);
-	margin: 0 0 2em 2em;
+	/*background: rgba(0,0,0,.3);*/
+	margin: 0 0 2rem 2rem;
+	/*padding: 2rem;*/
+}
+
+.col-pad {
+	padding: 1rem;
+	background: rgba(0,0,0,.1);
+	border-radius: 4px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,.4);
 }
 
 .row-fx-2,
-.row-fx-3 {
+.row-fx-3,
+.row-fx-4,
+.row-fx-5 {
 	flex-wrap: wrap;
 }
 
 .row-fx-2 .col-fx {
-	flex-basis: calc(50% - 2em);
+	flex-basis: calc(50% - 2rem);
 	background: rgba(220,20,20,.3);
 }
 
 .row-fx-3 .col-fx {
-	flex-basis: calc(33.333% - 2em);
+	flex-basis: calc(33.333% - 2rem);
 	background: rgba(20,20,220,.3);
 }
+
+.row-fx-4 .col-fx {
+	flex-basis: calc(25% - 2rem);
+	background: rgba(234, 230, 227,.95);
+}
+
+.row-fx-5 .col-fx {
+	flex-basis: calc(20% - 2rem);
+	background: rgba(220,210,80,.2);
+}
+
+@media screen and (max-width: 840px) {
+
+	.row-fx {flex-wrap: wrap;}
+
+	.row-fx-3 .col-fx,
+	.row-fx-4 .col-fx,
+	.row-fx-5 .col-fx {
+		flex-basis: calc(50% - 2rem);
+	}
+
+} /* 840px media end */
+
+@media screen and (max-width: 600px) {
+
+	.row-fx .col-fx,
+	.row-fx-2 .col-fx,
+	.row-fx-3 .col-fx,
+	.row-fx-4 .col-fx,
+	.row-fx-5 .col-fx {
+		flex-basis: calc(100% - 2rem);
+	}
+
+} /* 600px media end */
+
+
+
+
+/* ================================================
+	Centered Content
+=================================================== */
+
+.container-fx {
+	padding: 40px;
+	background: rgba(234, 230, 227,.95);
+}
+
+.center-all {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 150px 0;
+}
+.centered-box {
+	background: white;
+	max-width: 300px;
+	padding: 40px;
+	transition: all .3s;
+}
+
+.margin-l {
+	margin-left: 2rem;
+}
+
+@media screen and (max-width: 680px) {
+
+	.center-all {
+		flex-wrap: wrap;
+	}
+
+	.margin-l {
+		margin-left: 0;
+		margin-top: 2rem;
+	}
+
+} /* 680px media end */
+
+
+
+
+
